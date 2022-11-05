@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="store.js"></script>
+    
+    <link rel="stylesheet" href="store.css">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Store</title>
+</head>
+<body>
+ <!-- -------------the contact form ------------  -->
+    <div id="contact_form" class="first">
+        <form>
+            <label for="name">Product: </label>
+            <input type="text" id="name" autofocus required placeholder="name">
+            <label for="desc">Description:</label>
+            <input type="text"  id="desc" required placeholder="description">
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" required placeholder="date"><br>
+            <label for="price">Price:</label>
+            <input type="number" id = "price" required placeholder="price">
+            <label for="categorty">Category:</label>
+            <select id="category">
+                <option value="For men">For men</option>
+                <option value="For women">For Women</option>
+                <option value="For kids">For kids</option>
+                <option value="For all">For all</option>
+                <option disabled selected>--Choose--</option>
+            </select>
+            <label for="image-link">Image name:</label>
+            <input type="text"  id="image-link">
+            <input type="submit" value="Add product">
+        </form>
+    </div>
+
+    <div class="navigation">
+        <div class="title"><h1>BLUE STORE</h1></div>
+        <button id="add_button">New Adress / Hide form</button>
+    </div>
+
+
+    <!-- -------for the popup-------  -->
+    <div class="box" id="box1">
+        <div class="material-symbols-outlined"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+
+        <div class="text">
+            <p>Are you sure you want to remove this person?</p>          
+        </div>
+
+        <div class="buttons">
+            <button id="okay">OK</button>
+            <button id="cancel">Cancel</button>
+
+        </div>
+
+    </div>
+
+    <!-- ------for the main content ----------  -->
+    <div class="container">
+         <div class="right">
+            <h1>Catalog</h1>
+            <ul id="choose">
+    <!-- --------names are dynamically created here ---------                  -->
+            </ul>
+         </div>
+
+
+         <!-- ---------- displaying addresses ---------  -->
+         <div class="left">
+            <table>
+                <tr>
+                    <th>Product:</th>
+                    <td id="tname">T-shirt</td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td id="tdesc">Wonderful in summer</td>
+                </tr>
+                <tr>
+                    <th>Date:</th>
+                    <td id="tdate">2-02-2022</td>
+                </tr>
+                <tr>
+                    <th>Category:</th>
+                    <td id="tcategory">For men</td>
+                </tr>
+                <tr>
+                    <th>Price(RWF):</th>
+                    <td id="tprice">2000</td>
+                </tr>
+            </table>
+
+            <div class="product-image">
+                <img src="photos/product-10.jpg" alt="Product image">
+            </div>
+         </div>
+    </div>
+    
+</body>
+</html>
