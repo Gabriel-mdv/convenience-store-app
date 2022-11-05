@@ -1,11 +1,11 @@
 let already_displayed = [];
 
 
-let book1 = [{name: "Big-pant", description: "keeps your smart", date: "9/02/2023", price: "2234",cat: "for men", img: "photos/gallery-2.jpg", id: 1},
-{name: "Shirt", description: "Good in spring", date: "1/05/2023", price: "2200",cat: "for all", img: "photos/exclusive.png", id: 2},
-{name: "Pirana", description: "Your winter choice", date: "5/03/2023", price: "1034",cat: "for women",img: "photos/buy-1.jpg", id: 3},
-{name: "Sink", description: "Never dissapoint at work", date: "3/12/2023", price: "2294",cat: "for boys",img: "photos/buy-3.jpg", id: 4},
-{name: "Tower clothe", description: "Helps you store things", date: "9/02/20223", price: "2280",cat: "for kids",img: "photos/category-2.jpg", id: 5}]
+let book1 = [{name: "Big-pant", description: "keeps your smart", date: "9/02/2023", price: "2234",cat: "for men", img: "gallery-2", id: 1},
+{name: "Shirt", description: "Good in spring", date: "1/05/2023", price: "2200",cat: "for all", img: "category-2", id: 2},
+{name: "Pirana", description: "Your winter choice", date: "5/03/2023", price: "1034",cat: "for women",img: "buy-1", id: 3},
+{name: "Sink", description: "Never dissapoint at work", date: "3/12/2023", price: "2294",cat: "for boys",img: "buy-3", id: 4},
+{name: "Tower clothe", description: "Helps you store things", date: "9/02/20223", price: "2280",cat: "for kids",img: "category-2", id: 5}]
 
 
 // unique identifier of every contact
@@ -98,8 +98,7 @@ function newContact(){
     adress.date = document.querySelector('#date').value
     adress.price = document.querySelector('#price').value
     adress.cat = document.querySelector('#category').value
-    let link = document.querySelector('#image-link').value
-    adress.img = `photos/${link}.jpg`
+    adress.img = document.querySelector('#image-link').value
     adress.id = id;
     id++
 
@@ -124,7 +123,7 @@ function details (name){
             document.querySelector('#tdate').innerHTML = book1[i].date;
             document.querySelector('#tprice').innerHTML = book1[i].price;
             document.querySelector('#tcategory').innerHTML = book1[i].cat;
-            document.querySelector('img').src = book1[i].img;
+            document.querySelector('img').src =`https://github.com/Gabriel-mdv/convenience-store-app/blob/main/photos/${book1[i].img}.jpg?raw=true`;
         }
     }
 
